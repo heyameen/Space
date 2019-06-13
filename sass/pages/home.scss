@@ -1,0 +1,17 @@
+.container{
+  max-width: 120rem;
+  margin: 8rem auto;
+  background-color: $color-grey-light-2;
+  box-shadow: $shadow-dark;
+  border-radius: 4.5px;
+  overflow: hidden;
+
+  @include responsive(largest){
+    margin: 0;
+  }
+}
+
+.hotel-view{
+    flex: 1;
+}
+

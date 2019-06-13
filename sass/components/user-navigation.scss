@@ -1,0 +1,121 @@
+
+  //BRAND LOGO
+  .logo{
+    height:3.25rem;
+    margin-left: 2.5rem;
+  }
+
+
+  .search{
+    flex:0 0 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    @include responsive(smallest){
+      order: 1;
+      flex: 0 0 100%;
+    }
+  
+    &__input{
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      width:90%;
+      background-color: $color-grey-light-2;
+      border: none;
+      border-radius: 10rem;
+      margin-right:-3.25rem;
+      padding: .7rem 2rem;
+      transition: all .2s;
+
+
+      &:focus{
+        outline: none;
+        width: 100%;
+        background-color: $color-grey-light-3;
+      }
+
+      &::-webkit-input-placeholder{
+        font-weight: 100;
+        color: $color-grey-light-4;
+      }
+    }
+
+    &__input:focus + &__button {
+      background-color: $color-grey-light-3;
+    }
+
+    &__button{
+      border:none;
+      background-color: $color-grey-light-2;
+      outline: none;
+      fill: $color-grey-dark-1;
+    }
+
+    &__icon{
+      height: 2rem;
+      width: 2rem;
+    }
+
+  }
+
+
+//THIS PART DEALS WITH THE USER PROFILE, NOTIFICATION AND BOOKMARKS
+  .user-details{
+    display:flex;
+    align-self: stretch;
+
+
+    & > *{
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    & > *:hover{
+      background-color: $color-grey-light-2;
+  }
+
+    &__icon-box{
+      position: relative;
+    }
+
+    &__icon{
+      height: 2.25rem;
+      width: 2.25rem;
+      fill: $color-grey-dark-2;
+    }
+
+    &__notification{
+      height: 1.25rem;
+      width: 1.25rem;
+      border-radius: 50%;
+      background-color: $color-primary;
+      color: #fff;
+      font-size: .8rem;
+      position: absolute;
+      top: 2rem;
+      right:1.5rem;
+      //TO POSITION THE CONTENT
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__user{
+      color: $color-grey-dark-2;
+
+      &-image{
+        height:3.75rem;
+        border-radius: 50%;
+        margin-right: 1rem;
+
+      }
+
+    }
+
+
+  }

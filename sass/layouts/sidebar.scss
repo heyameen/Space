@@ -1,0 +1,116 @@
+  //SIDE NAVIGATION LAYOUT
+  .sidebar{
+    background-color: $color-grey-dark-1;
+    flex:0 0 18%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+  }
+
+
+  //SIDE NAVIGATION
+  .side-nav {
+    font-size: 1.4rem;
+    list-style: none;
+    margin-top: 3.5rem;
+
+    @include responsive (large){
+      display: flex;
+      margin: 0;
+    }
+
+
+    &__item {
+      position: relative;
+      @include responsive (large){
+        flex: 1;
+      }
+
+      &:not(:last-child){
+        @include responsive (large){
+          margin: 0;
+        }
+
+        margin-bottom: 1.5rem;
+      }
+
+    }
+
+    &__item::before{
+      content: "";
+      width: 3px;
+      height: 100%;
+      background-color: $color-primary;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: transform.2s,
+                  width .5s cubic-bezier(1,0,0,1) .2s,
+                  background-color 1s;
+      transform: scaleY(0);
+    }
+
+    &__item:hover::before,
+    &__item--active::before{
+      width: 100%;
+      transform: scaleY(1);
+    }
+
+    &__item:active::before{
+      background-color: $color-primary-light;
+    }
+
+
+    &__link:link,
+    &__link:visited{
+      position: relative;
+      color: $color-grey-light-1;
+      text-decoration: none;
+      text-transform: uppercase;
+      //display: block;
+      padding: 1.5rem 3rem;
+      z-index: 10;
+
+
+      display: flex;
+      align-items: center;
+
+      @include responsive (large){
+        display: flex;
+        justify-content: center;
+      }
+
+      @include responsive (small){
+        flex-direction: column;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+      }
+
+    }
+
+    &__icon{
+      width: 2rem;
+      height: 2rem;
+      margin-right: 1.5rem;
+      fill: currentColor;
+
+      @include responsive (small){
+        margin-right: 0;
+        margin-bottom: .7rem;
+      }
+    }
+  }
+
+
+  //COPYRIGHT
+  .copyright{
+    font-size: 1.2rem;
+    color: $color-grey-light-4;
+    padding: 2.5rem;
+    text-align: center;
+
+    @include responsive (large){
+      display: none;
+    }
+  }

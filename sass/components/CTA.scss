@@ -1,0 +1,25 @@
+  .cta{
+    background-color: #fff;
+    padding:3.5rem 0;
+    text-align: center;
+
+    @include responsive(medium){
+      padding: 2rem 0;
+    }
+
+    @include responsive(smallest){
+      padding: 1.5rem 0;
+    }
+
+    &__header{
+      font-size: 2.5rem;
+      font-weight: 300;
+      margin-bottom: 2.5rem;
+      color: $color-grey-dark-2;
+
+      @include responsive(smallest){
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }

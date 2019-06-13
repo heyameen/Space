@@ -1,0 +1,32 @@
+{
+  "name": "Space",
+  "version": "1.0.0",
+  "description": "A all in one booking app",
+  "homepage": "https://heyameen.github.io/Space",
+  "main": "index.js",
+  "scripts": {
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:scss",
+    "watch:scss": "node-sass sass/main.scss css/style.css -w",
+    "compile:scss": "node-sass sass/main.scss css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 7 versions\" css/style.comp.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:scss prefix:css compress:css",
+    "test": "jest",
+    "deploy": "gh-pages -d index.html"
+  },
+  "author": "ameen",
+  "license": "ISC",
+  "dependencies": {
+    "gh-pages": "^2.0.1",
+    "node-sass": "^4.11.0",
+    "save": "^2.3.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "concat": "^1.0.3",
+    "jest": "^24.5.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.1.2"
+  }
+}
