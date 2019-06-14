@@ -13,7 +13,7 @@
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
     "build:css": "npm-run-all compile:scss prefix:css compress:css",
     "test": "jest",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d Space"
   },
   "author": "ameen",
   "license": "ISC",
