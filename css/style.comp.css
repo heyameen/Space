@@ -127,9 +127,9 @@ body {
     /*background-image: url('../../img/chevron-thin-right.svg');
       background-size:cover;*/
     background-color: #eb2f64;
-    -webkit-mask-image: url("../../img/chevron-thin-right.svg");
+    -webkit-mask-image: url("../img/chevron-thin-right.svg");
     -webkit-mask-size: cover;
-    mask-image: url("../../img/chevron-thin-right.svg");
+    mask-image: url("../img/chevron-thin-right.svg");
     mask-size: cover; }
 
 .recommend {
