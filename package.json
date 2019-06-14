@@ -7,13 +7,13 @@
   "scripts": {
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watch:scss",
-    "watch:scss": "node-sass sass/main.scss css/style.css -w",
-    "compile:scss": "node-sass sass/main.scss css/style.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b \"last 7 versions\" css/style.comp.css -o css/style.prefix.css",
-    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "watch:scss": "node-sass sass/main.scss dist/css/style.css -w",
+    "compile:scss": "node-sass sass/main.scss dist/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b \\\"last 7 versions\\\" dist/css/style.comp.css -o css/style.prefix.css",
+    "compress:css": "node-sass dist/css/style.prefix.css css/style.css --output-style compressed",
     "build:css": "npm-run-all compile:scss prefix:css compress:css",
     "test": "jest",
-    "deploy": "gh-pages -d Space"
+    "deploy": "gh-pages -d dist"
   },
   "author": "ameen",
   "license": "ISC",
